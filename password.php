@@ -12,6 +12,7 @@ class Password extends \atk4\data\Model {
   function init() {
    parent::init();
     $this->addField('password',['type'=>'password']);
-    $this->hasOne('password_id');
 }
 }
+$form=$app->add(['Form']);
+$form->setModel(new Password($db));
